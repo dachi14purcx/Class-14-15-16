@@ -37,7 +37,7 @@ left(90)
 forward(153)
 exitonclick()
 
-width = 153
-length = 283
+width = 10
+length = 20
 
 print('P = width + length = ' + str((width + length) * 2))
