@@ -40,4 +40,4 @@ exitonclick()
 width = 153
 length = 283
 
-print('P = width + length = ' + str(width + length))
+print('P = width + length = ' + str((width + length) * 2))
