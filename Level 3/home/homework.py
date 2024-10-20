@@ -1,9 +1,7 @@
 # ცვლადის შქმნა :
-# 1) მოვიფიქროთ ცვლადის სახელი
-# 2) დავწეროთ სახელი (სასურველია ინგლისურად)
-# 3) დავწეროთ დამაკავშირებელი სიმბოლო (=)
-# 4) დავწეროთ ბრჭყალები იმ შემთხვევაში, თუ string_ია, თუ integer მაშინა არა
-# 5) დავუწეროთ მნიშვნელობა
+# 1) ცვლადის სახელი
+# 2) დამაკავშირებელი სიმბოლო (=)
+# 3) ცვლადის მნიშვნელბა
 
 # Homework 1
 num1 = 265
@@ -17,7 +15,7 @@ x = 487
 y = 'QWERTY'
 print(x * y)
 
-# Homework 3
+# Homework 4
 from turtle import *
 
 width(10)
@@ -37,7 +35,7 @@ left(90)
 forward(153)
 exitonclick()
 
-width = 153
-length = 283
+width = 10
+length = 20
 
-print('P = width + length = ' + str(width + length))
+print('P = width + length = ' + str((width + length) *2))
