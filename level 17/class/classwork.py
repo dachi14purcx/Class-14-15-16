@@ -14,13 +14,23 @@ print(lst)
 #2
 num = int(input('number = '))
 
-user_numbers = [num]
+user_numbers = []
+user_numbers.append(num)
+
 
 while num != '':
     num = input('number = ')
-    user_numbers += [num]
+    if num == "":
+        break
+    try:
+        user_numbers.append(int(num))
+    except ValueError:
+        pass
+    
 
 if len(user_numbers) > 10:
     print('სიაში არის 10-ზე მეტი რიცხვი')
 else:
     print('სიაში ათზე მეტი რიცხვი არ არი')
+
+print(sum(user_numbers))
