@@ -1,0 +1,55 @@
+/* Body Style */
+body {
+    font-family: Arial, sans-serif; /* Font family set for the website */
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Style */
+header {
+    background-color: #333; /* Dark background for header */
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none; /* Removing bullet points from the list */
+    text-align: center; /* Center-aligning the navigation items */
+}
+
+nav ul li {
+    display: inline-block; /* Making the list items inline */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Removing underline from links */
+    color: white;
+    font-weight: bold; /* Making the font bold */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em; /* Setting the size of the main heading */
+    font-weight: normal; /* Using normal weight for the heading */
+    font-style: italic; /* Making the heading italic */
+}
+
+/* Footer Style */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Links Hover Effect */
+nav ul li a:hover {
+    color: #ff6347; /* Changing link color to tomato when hovered */
+}
