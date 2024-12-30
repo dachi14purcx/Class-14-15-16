@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4608ab, #a452bb);
+      margin: 0;
+      padding: 0;
+    }
+    .table-container {
+      width: 80%;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #9c27b0;
+      color: white;
+    }
+    td {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    td.total {
+      font-weight: bold;
+      color: #4caf50;
+    }
+    td.price, td.total {
+      color: #4caf50;
+    }
+    td.quantity {
+      color: #f44336;
+    }
+    h2 {
+      text-align: center;
+      color: white;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-container">
+    <h2>Order Details</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Order ID</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2017-09-29 01:22</td>
+          <td>200398</td>
+          <td>iPhone X 64Gb Grey</td>
+          <td>$999.00</td>
+          <td>1</td>
+          <td class="total">$999.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-28 05:57</td>
+          <td>200397</td>
+          <td>Samsung S8 Black</td>
+          <td>$756.00</td>
+          <td>1</td>
+          <td class="total">$756.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-26 05:57</td>
+          <td>200396</td>
+          <td>Game Console Controller</td>
+          <td>$22.00</td>
+          <td>2</td>
+          <td class="total">$44.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-25 23:06</td>
+          <td>200392</td>
+          <td>USB 3.0 Cable</td>
+          <td>$10.00</td>
+          <td>3</td>
+          <td class="total">$30.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-24 05:57</td>
+          <td>200391</td>
+          <td>Smartwatch 4.0 LTE Wifi</td>
+          <td>$199.00</td>
+          <td>6</td>
+          <td class="total">$1,194.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-23 05:57</td>
+          <td>200390</td>
+          <td>Camera C430W 4k</td>
+          <td>$699.00</td>
+          <td>1</td>
+          <td class="total">$699.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-22 05:57</td>
+          <td>200389</td>
+          <td>Macbook Pro Retina 2017</td>
+          <td>$2,199.00</td>
+          <td>1</td>
+          <td class="total">$2,199.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-21 05:57</td>
+          <td>200388</td>
+          <td>Game Console Controller</td>
+          <td>$999.00</td>
+          <td>1</td>
+          <td class="total">$999.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-19 05:57</td>
+          <td>200387</td>
+          <td>iPhone X 64Gb Grey</td>
+          <td>$999.00</td>
+          <td>1</td>
+          <td class="total">$999.00</td>
+        </tr>
+        <tr>
+          <td>2017-09-18 05:57</td>
+          <td>200386</td>
+          <td>iPhone X 64Gb Grey</td>
+          <td>$999.00</td>
+          <td>1</td>
+          <td class="total">$999.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

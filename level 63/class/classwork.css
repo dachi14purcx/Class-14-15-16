@@ -1,0 +1,83 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Profile Container */
+.profile-container {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.description {
+    text-align: justify;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .profile-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .content {
+        flex: 1;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 20px 0 0;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,89 @@
+/* საერთო სტილები */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* კვადრატების სტილები */
+.square {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+/* კვადრატები */
+.square1 {
+    background-color: red;
+}
+
+.square1:hover {
+    transform: rotate(45deg);
+    background-color: yellow;
+}
+
+.square2 {
+    background-color: green;
+}
+
+.square2:hover {
+    transform: scale(1.5);
+    background-color: orange;
+}
+
+.square3 {
+    background-color: blue;
+}
+
+.square3:hover {
+    transform: translateX(100px);
+    background-color: purple;
+}
+
+.square4 {
+    background-color: purple;
+}
+
+.square4:hover {
+    transform: skewY(20deg);
+    background-color: pink;
+}
+
+/* ბმულების სტილი */
+.link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #007BFF;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 10px;
+}
+
+/* hover ეფექტი */
+.link:hover {
+    transform: rotate(15deg);
+    color: darkblue;
+}
+
+/* გამოსახულების სტილი */
+.image {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+
+/* hover ეფექტი გამოსახულებაზე */
+.image:hover {
+    transform: scale(1.2);
+}

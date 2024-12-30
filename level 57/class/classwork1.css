@@ -1,0 +1,22 @@
+/* საერთო სტილები */
+body {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* ბმულის სტილი */
+.link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #007BFF;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* hover ეფექტი */
+.link:hover {
+    transform: rotate(15deg);
+    color: darkblue;
+}

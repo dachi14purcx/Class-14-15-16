@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Details</title>
+</head>
+<body>
+    <h1>Scan Details</h1>
+    <form>
+        <label for="scanFor">Scan for:</label>
+        <select id="scanFor" name="scanFor">
+            <option value="ActiveDirectory">Active Directory</option>
+        </select><br><br>
+
+        <label for="domainName">Fully-qualified domain name:</label>
+        <input type="text" id="domainName" name="domainName"><br><br>
+
+        <label for="organizationUnit">Organizational Unit:</label>
+        <input type="text" id="organizationUnit" name="organizationUnit"><br><br>
+
+        <label for="domainController">Domain Controller:</label>
+        <input type="text" id="domainController" name="domainController"><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Add to Scan</button>
+        <button type="reset">Exclude from Scan</button>
+    </form>
+</body>
+</html>

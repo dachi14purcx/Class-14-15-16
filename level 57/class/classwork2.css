@@ -1,0 +1,17 @@
+/* საერთო სტილები */
+body {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* გამოსახულების სტილი */
+.image {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* hover ეფექტი */
+.image:hover {
+    transform: scale(1.2);
+}

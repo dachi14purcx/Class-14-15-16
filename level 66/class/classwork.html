@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ელემენტები</title>
+    <style>
+        :root {
+            --main-color: #3498db;
+            --bg-color: #f4f4f4;
+            --font-size: 16px;
+            --letter-spacing: 1px;
+            --padding: 10px;
+            --margin: 20px;
+            --transition-speed: 0.3s;
+        }
+
+        .element1 {
+            color: var(--main-color);
+            background-color: var(--bg-color);
+            font-size: var(--font-size);
+            letter-spacing: var(--letter-spacing);
+            padding: var(--padding);
+            margin: var(--margin);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .element2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: var(--padding);
+            margin: var(--margin);
+            background-color: var(--bg-color);
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .element3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: var(--padding);
+            margin: var(--margin);
+            background-color: var(--bg-color);
+            transform: rotate(10deg);
+            transition: all var(--transition-speed) ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="element1">
+        <p>ეს არის ელემენტი 1</p>
+    </div>
+    <div class="element2">
+        <p>ეს არის ელემენტი 2</p>
+    </div>
+    <div class="element3">
+        <p>ეს არის ელემენტი 3</p>
+    </div>
+</body>
+</html>

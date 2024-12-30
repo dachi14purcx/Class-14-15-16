@@ -1,0 +1,18 @@
+/* flex: ადრე, -webkit-flex, -ms-flex და სხვ. გამოიყენებოდა. ახლა, ამ თვისებას შეიძლება გამოყენებულ იქნას display: flex პირდაპირი სტილით.
+grid: ადრე -ms-grid იყო საჭირო Internet Explorer-ისათვის, მაგრამ ახლა display: grid არის სტანდარტული.
+transition: ადრე -webkit-transition, -moz-transition და სხვ. იყო საჭირო. ახლა უკვე მხარდაჭერილია transition ყველგან. */
+.container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.grid-container {
+    display: -ms-grid;
+    display: grid;
+}
+
+.box {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}

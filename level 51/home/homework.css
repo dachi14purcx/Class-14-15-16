@@ -1,0 +1,89 @@
+/* ზოგადი სტილები */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* სექცია სტილები */
+.section {
+    padding: 100px 20px;
+    margin-top: 50px;
+}
+
+.relative-box {
+    position: relative;
+    top: 30px;
+    left: 50px;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.absolute-box {
+    position: absolute;
+    left: 50px;
+    background-color: #ffeb3b;
+    padding: 20px;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

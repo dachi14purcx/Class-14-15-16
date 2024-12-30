@@ -1,0 +1,41 @@
+button {
+    font-size: 10000px;
+    color: blue;
+    background-color: bisque;
+}
+
+.click {
+    font-size: 5000px;
+    color: cadetblue;
+    background-color: blueviolet;
+}
+
+#click {
+    font-size: 2500px;
+    color: aqua;
+    background-color: chocolate;
+}
+
+#click2 {
+    font-size: 1000px;
+    color: red;
+    background-color: green;
+}
+
+#click3 {
+    font-size: 500px;
+    color: blue;
+    background-color: blueviolet;
+}
+
+#click4 {
+    font-size: 100px;
+    color: yellow;
+    background-color: black;
+}
+
+#click5 {
+    font-size: 1px;
+    color: aqua;
+    background-color: chocolate;
+}

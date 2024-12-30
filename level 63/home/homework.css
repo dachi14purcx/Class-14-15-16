@@ -1,0 +1,73 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Card styles */
+.card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile picture */
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #444;
+}
+
+/* Name and location */
+.name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.location {
+    color: #9acd32;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.bio {
+    font-style: italic;
+    margin: 10px 0 20px;
+}
+
+/* Buttons */
+.buttons a {
+    display: block;
+    margin: 8px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 80%;
+    transition: background 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #555;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .card {
+        width: auto;
+    }
+}

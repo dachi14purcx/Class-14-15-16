@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animations</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 200vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Text fade-in effect */
+        .fade-text {
+            font-size: 2rem;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-text:hover {
+            opacity: 1;
+        }
+
+        /* Rotating button */
+        .rotate-button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .rotate-button:hover {
+            transform: rotate(145deg);
+        }
+
+        /* Image gallery with zoom and opacity */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .image-gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            opacity: 0.5;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        /* Element entry animations */
+        .entry-element {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: #FF5722;
+            position: relative;
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+
+        .from-top {
+            animation-delay: 0.2s;
+            transform: translateY(-100px);
+        }
+        .from-bottom {
+            animation-delay: 0.4s;
+            transform: translateY(100px);
+        }
+        .from-left {
+            animation-delay: 0.6s;
+            transform: translateX(-100px);
+        }
+        .from-right {
+            animation-delay: 0.8s;
+            transform: translateX(100px);
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translate(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Text fade-in effect -->
+    <div class="fade-text">Hover over this text to make it appear!</div>
+
+    <!-- Rotating button -->
+    <button class="rotate-button">Click Me</button>
+
+    <!-- Image gallery -->
+    <div class="image-gallery">
+        <img src="https://via.placeholder.com/150" alt="Image 1">
+        <img src="https://via.placeholder.com/150" alt="Image 2">
+        <img src="https://via.placeholder.com/150" alt="Image 3">
+        <img src="https://via.placeholder.com/150" alt="Image 4">
+        <img src="https://via.placeholder.com/150" alt="Image 5">
+        <img src="https://via.placeholder.com/150" alt="Image 6">
+        <img src="https://via.placeholder.com/150" alt="Image 7">
+        <img src="https://via.placeholder.com/150" alt="Image 8">
+        <img src="https://via.placeholder.com/150" alt="Image 9">
+        <img src="https://via.placeholder.com/150" alt="Image 10">
+    </div>
+
+    <!-- Entry elements -->
+    <div class="entry-element from-top"></div>
+    <div class="entry-element from-bottom"></div>
+    <div class="entry-element from-left"></div>
+    <div class="entry-element from-right"></div>
+</body>
+</html>

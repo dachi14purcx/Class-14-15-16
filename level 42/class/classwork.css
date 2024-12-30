@@ -1,0 +1,54 @@
+a:link {
+    color: blue; 
+    text-decoration: none; 
+    font-weight: bold;
+    background-color: yellow; 
+    padding: 10px; 
+    border: 2px solid black; 
+}
+  
+a:visited {
+    color: purple;
+    text-decoration: underline; 
+    font-style: italic;
+    background-color: lightgray;
+    padding: 5px 15px;
+}
+  
+
+a:active {
+    color: red;
+    background-color: green; 
+    transform: scale(0.95);
+    text-decoration: line-through; 
+    font-size: 18px; 
+}
+  
+a:hover {
+    color: green;
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: lightblue;
+    transform: rotate(5deg); 
+}
+  
+a:link:hover {
+    color: yellow; 
+}
+  
+a:visited:hover {
+    color: orange; 
+}
+  
+a:active:hover {
+    background-color: red; 
+}
+  
+a:link:active {
+    color: blue;
+}
+  
+a:hover:visited {
+    text-decoration: underline; 
+}
+  

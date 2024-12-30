@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 3em; /* Larger font size for the title */
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.goals {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.click-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.click-button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}

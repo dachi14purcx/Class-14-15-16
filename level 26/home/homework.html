@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        form h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        label {
+            display: block;
+            margin: 8px 0 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #138496;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Scan Details</h1>
+        <label for="scanFor">Scan for:</label>
+        <select id="scanFor" name="scanFor">
+            <option value="ActiveDirectory">Active Directory</option>
+        </select>
+        <label for="domainName">Fully-qualified domain name:</label>
+        <input type="text" id="domainName" name="domainName">
+        <label for="organizationUnit">Organizational Unit:</label>
+        <input type="text" id="organizationUnit" name="organizationUnit">
+        <label for="domainController">Domain Controller:</label>
+        <input type="text" id="domainController" name="domainController">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Add to Scan</button>
+        <button type="reset">Exclude from Scan</button>
+    </form>
+</body>
+</html>

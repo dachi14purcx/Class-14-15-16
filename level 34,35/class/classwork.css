@@ -1,0 +1,83 @@
+/* Styling for classes */
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.paragraph {
+    font-size: 18px;
+    color: darkgreen;
+    margin: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.header {
+    font-family: Arial, sans-serif;
+    color: navy;
+    text-align: center;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* Styling for IDs */
+#uniqueBox {
+    width: 250px;
+    height: 150px;
+    background-color: coral;
+    text-align: center;
+    line-height: 150px;
+    margin: 20px auto;
+    border: 2px solid red;
+    border-radius: 15px;
+}
+
+#uniqueParagraph {
+    font-size: 20px;
+    color: darkred;
+    margin: 25px;
+    text-align: justify;
+}
+
+#uniqueButton {
+    padding: 15px 30px;
+    background-color: purple;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+#uniqueHeader {
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#uniqueHighlight {
+    background-color: lightgreen;
+    font-weight: bold;
+    padding: 8px;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+}

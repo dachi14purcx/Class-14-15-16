@@ -1,0 +1,92 @@
+/* Position Example */
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+  }
+  .box {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+  }
+  
+  /* Background Image Example */
+  .background-box {
+    width: 300px;
+    height: 300px;
+    background-image: url('https://via.placeholder.com/300'), url('https://via.placeholder.com/100');
+    background-position: center, top right;
+    background-size: cover, contain;
+  }
+  
+  /* Transform Example */
+  .transform-box {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    transition: transform 0.3s;
+  }
+  .transform-box:hover {
+    transform: rotate(45deg) scale(1.5);
+  }
+  
+  /* Transition Example */
+  .transition-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .transition-button:hover {
+    background-color: green;
+  }
+  
+  /* Flexbox Example */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    background-color: lightgrey;
+  }
+  .flex-item {
+    padding: 20px;
+    background-color: tomato;
+    color: white;
+  }
+  
+  /* Animation Example */
+  .bounce-box {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Responsive Example */
+  .responsive-box {
+    width: 50%;
+    height: 100px;
+    background-color: coral;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+  }
+  @media (max-width: 600px) {
+    .responsive-box {
+      width: 100%;
+      background-color: navy;
+    }
+  }  

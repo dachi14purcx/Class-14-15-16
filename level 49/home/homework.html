@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>პოზიციონირების მაგალითი</title>
+  <style>
+    /* Header */
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header nav {
+      display: absolute;
+      gap: 15px;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Content Sections */
+    section {
+      padding: 100px 20px;
+      border: 1px solid #ddd;
+      margin-top: 50px;
+    }
+
+    /* First Section: Static Position */
+    .static-section {
+      position: static;
+    }
+
+    /* Second Section: Relative Position */
+    .relative-section {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    /* Third Section: Absolute Position */
+    .absolute-section {
+      position: relative;
+      height: 200px;
+      border: 1px solid #ddd;
+    }
+
+    .absolute-content {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: #ffcccb;
+      padding: 20px;
+    }
+
+    /* Fourth Section: Sticky Position */
+    .sticky-section h2 {
+      position: sticky;
+      top: 0;
+      background-color: #add8e6;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    /* Footer: Fixed Position */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Sticky Right-Aligned Element */
+    .sticky-right {
+      position: sticky;
+      margin-top: 0;
+      margin-left: auto;
+      background-color: #98fb98;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div>ვებგვერდის სათაური</div>
+    <nav>
+      <a href="#static">Static</a>
+      <a href="#relative">Relative</a>
+      <a href="#absolute">Absolute</a>
+      <a href="#sticky">Sticky</a>
+    </nav>
+  </header>
+  <section id="sticky" class="sticky-section">
+    <h2>Sticky Header</h2>
+    <p>ეს არის სტიკი პოზიციონირების მაგალითი.</p>
+    <div class="sticky-right">სტიკი ელემენტი</div>
+  </section>
+  <!-- Sections -->
+  <section id="static" class="static-section">
+    <h1>Static Section</h1>
+    <p>ეს არის სტატიკური პოზიციონირების მაგალითი.</p>
+  </section>
+
+  <section id="relative" class="relative-section">
+    <h1>Relative Section</h1>
+    <p>ეს არის რელატიური პოზიციონირების მაგალითი.</p>
+  </section>
+
+  <section id="absolute" class="absolute-section">
+    <h1>Absolute Section</h1>
+    <div class="absolute-content">ეს არის აბსოლუტური პოზიციონირების მაგალითი.</div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    ეს არის გვერდის ფიქსირებული ქვედა ნაწილი.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect on Boxes</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #007BFF;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .box:hover {
+            transform: scale(1.1);
+            background-color: #0056b3;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* Padding-ის მაგალითები */
+.padding-example-1 {
+    background-color: lightblue;
+    padding: 10px; /* ყველა მხარეს 10px */
+}
+
+.padding-example-2 {
+    background-color: lightgreen;
+    padding: 20px 10px; /* ზედა და ქვემოთ 20px, მარცხენა და მარჯვნივ 10px */
+}
+
+.padding-example-3 {
+    background-color: lightcoral;
+    padding: 20px 10px 5px 15px; /* ზედა 20px, მარჯვნივ 10px, ქვემოთ 5px, მარცხნივ 15px */
+}
+
+.padding-example-4 {
+    background-color: lightyellow;
+    padding: 30px 20px 10px 40px; /* ზედა 30px, მარჯვნივ 20px, ქვემოთ 10px, მარცხნივ 40px */
+}
+
+/* Margin-ის მაგალითები */
+.margin-example-1 {
+    background-color: lightblue;
+    margin: 20px; /* ყველა მხარეს 20px */
+}
+
+.margin-example-2 {
+    background-color: lightgreen;
+    margin: 10px 5px; /* ზედა და ქვემოთ 10px, მარცხენა და მარჯვნივ 5px */
+}
+
+.margin-example-3 {
+    background-color: lightcoral;
+    margin: 15px 25px 5px 10px; /* ზედა 15px, მარჯვნივ 25px, ქვემოთ 5px, მარცხნივ 10px */
+}
+
+.margin-example-4 {
+    background-color: lightyellow;
+    margin: 30px 40px 50px 60px; /* ზედა 30px, მარჯვნივ 40px, ქვემოთ 50px, მარცხნივ 60px */
+}
+
+/* Universal Selector - ყველა ელემენტის სტილი */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray; /* ყველა ელემენტს ერთნაირი ფონდის ფერი */
+    font-family: Arial, sans-serif; /* ყველა ელემენტს სასურველი შრიფტი */
+    color: darkslategray; /* ყველა ელემენტს ცეზური ფერი */
+}

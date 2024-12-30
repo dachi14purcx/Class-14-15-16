@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(https://pics.craiyon.com/2024-01-08/ZG_u35L2QW6VQoKjGzRGcA.webp);
+      color: white;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: black;
+    }
+    .form-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+    .form-container input, .form-container textarea, .form-container button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .form-container button {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .form-container button:hover {
+      background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" rows="5" required></textarea>
+      <button type="submit">Send Your Message</button>
+    </form>
+  </div>
+</body>
+</html>

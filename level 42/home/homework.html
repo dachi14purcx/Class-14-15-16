@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Table Header</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to top, #ff007f, #7b00ff);
+      margin: 0;
+      padding: 0;
+    }
+    .table-container {
+      width: 80%;
+      margin: 50px auto;
+      background-color: #00bcd4;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #fff;
+    }
+    th {
+      background-color: #008c8c;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    td {
+      background-color: #00bcd4;
+    }
+    th, td {
+      color: white;
+    }
+    .price {
+      color: #ffeb3b;
+    }
+    .change {
+      color: #8bc34a;
+    }
+    .negative {
+      color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-container">
+    <h2 style="text-align: center; color: white;">Fixed Table Header</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Price</th>
+          <th>Change</th>
+          <th>Change %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Australian Company</td>
+          <td class="price">$1.38</td>
+          <td class="change">+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>Ausenco</td>
+          <td class="price">$2.38</td>
+          <td class="change">-0.01</td>
+          <td class="negative">-1.36%</td>
+        </tr>
+        <tr>
+          <td>Adelaide</td>
+          <td class="price">$3.22</td>
+          <td class="change">+0.01</td>
+          <td class="change">+1.36%</td>
+        </tr>
+        <tr>
+          <td>Aditya Birla</td>
+          <td class="price">$1.02</td>
+          <td class="negative">-1.01</td>
+          <td class="change">+2.36%</td>
+        </tr>
+        <tr>
+          <td>Australian Company</td>
+          <td class="price">$1.38</td>
+          <td class="change">+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>Ausenco</td>
+          <td class="price">$2.38</td>
+          <td class="change">-0.01</td>
+          <td class="negative">-1.36%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

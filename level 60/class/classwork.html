@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>დავალება 1</title>
+  <style>
+    /* Root variables */
+    :root {
+      --color: #fff;
+      --background-color: #3498db;
+      --font-size: 16px;
+      --font-family: Arial, sans-serif;
+      --box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      --border: 2px solid #2980b9;
+      --border-radius: 10px;
+      --margin: 10px;
+      --padding: 20px;
+      --position: relative;
+    }
+
+    /* Base styles */
+    div {
+      width: 150px;
+      height: 150px;
+      margin: var(--margin);
+      padding: var(--padding);
+      background-color: var(--background-color);
+      color: var(--color);
+      font-size: var(--font-size);
+      font-family: var(--font-family);
+      border: var(--border);
+      border-radius: var(--border-radius);
+      position: var(--position);
+      transition: all 0.3s ease;
+      box-shadow: var(--box-shadow);
+    }
+
+    /* First div - Rotate on hover */
+    #div1:hover {
+      transform: rotate(280deg);
+      background-color: #e74c3c;
+    }
+
+    /* Second div - Scale on hover */
+    #div2:hover {
+      transform: scale(3);
+    }
+
+    /* Third div - Rotate and scale with transition */
+    #div3:hover {
+      transform: rotate(180deg) scale(1.5);
+    }
+  </style>
+</head>
+<body>
+  <div id="div1"></div>
+  <div id="div2"></div>
+  <div id="div3"></div>
+</body>
+</html>
