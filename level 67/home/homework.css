@@ -1,0 +1,182 @@
+body {
+background-color: #222423;
+margin: 0px;
+font-family: sans-serif;
+color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3B3B3B;
+}
+
+p {
+    font-size: 1.3vw;
+}
+
+.nav {
+    position: fixed;
+    display: flex;
+    background-color: #3B3B3B;
+    justify-content: flex-end;
+    color: #ffffff;
+    height: 4vw;
+    align-items: center;
+    width: 100vw;
+    z-index: 10000000000000;
+}
+
+.dp {
+    margin-right: auto;
+    margin-left: 1vw;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+.nav-text {
+    margin-right: 2vw;
+    font-size: 1vw;
+}
+
+.header {
+    color: #ffffff;
+    display: flex;
+    align-items: start;
+}
+
+img {
+    margin-right: auto;
+    width: 40vw;
+    margin-top: 4vw;
+}
+
+h1 {
+    font-size: 10vw;
+    font-weight: 900;
+    margin: 0px;
+    padding: 1vw 5vw 1vw 5vw;
+    margin-top: 4vw;
+}
+
+.bottom-header {
+    width: 54vw;
+    position: relative;
+    left: 45vw;
+    top: -15vw;
+}
+
+.header-text {
+    color: #ffffff;
+    display: inline;
+    font-size: 1.5vw;
+    
+}
+
+.header-hr {
+    width: 36.5vw;
+    position: relative;
+    left: 31vw;
+    top: -48vw;
+    border: 0.3vw solid white;
+}
+
+button {
+    margin-left: 19vw;
+    margin-top: 3vw;
+    width: 15vw;
+    height: 5vw;
+    font-size: 2vw;
+    font-weight: 600;
+    box-shadow: 0px 0px 20px 10px #121212
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button:active {
+    opacity: 1;
+}
+
+.introduction-img {
+    position: relative;
+    margin-left: 60vw;
+    margin-top: 0px;
+    width: 35vw;
+}
+
+.introduction {
+    position: relative;
+    top: -40vw;
+    left: 6vw;
+    width: 45vw;
+    
+}
+
+.int-header {
+    font-size: 5vw;
+}
+
+.about-me {
+    position: relative;
+    top: -35vw;
+    left: 6vw;
+    width: 20vw;
+}
+
+.about-me-header {
+    font-size: 2.5vw;
+    position: relative;
+    top: -2vw;
+}
+
+.about-portfolio {
+    position: relative;
+    top: -50vw;
+    left: 32vw;
+    width: 20vw;
+}
+
+.introduction-hr {
+    position: relative;
+    top: -80vw;
+    left: -35.5vw;
+    width: 16vw;
+    border: 0.15vw solid #ffffff;
+    border-radius: 10px;
+}
+
+.about-me-hr {
+    position: relative;
+    top: -62vw;
+    left: -39.7vw;
+    width: 8vw;
+    border: 0.15vw solid #ffffff;
+    border-radius: 10px;
+}
+
+.about-portfolio-hr {
+    position: relative;
+    top: -62.5vw;
+    left: -11.7vw;
+    width: 12vw;
+    border: 0.15vw solid #ffffff;
+    border-radius: 10px;
+}
+
+.introduction-img-hr {
+    position: relative;
+    top: -87.75vw;
+    left: 6.5vw;
+    height: 35vw;
+    width: 0px;
+    border: 0.25vw solid #ffffff;
+    border-radius: 10px;
+}
