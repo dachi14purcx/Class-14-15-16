@@ -3,6 +3,7 @@ background-color: #222423;
 margin: 0px;
 font-family: sans-serif;
 color: white;
+display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -18,7 +19,7 @@ color: white;
 }
 
 p {
-    font-size: 1.3vw;
+    font-size: 1vw;
 }
 
 .nav {
@@ -47,54 +48,52 @@ p {
 
 .header {
     color: #ffffff;
-    display: flex;
-    align-items: start;
 }
 
 img {
-    margin-right: auto;
-    width: 40vw;
     margin-top: 4vw;
+    width: 40vw;
 }
 
 h1 {
-    font-size: 10vw;
+    margin-right: 10vw;
+    font-size: 8vw;
     font-weight: 900;
-    margin: 0px;
-    padding: 1vw 5vw 1vw 5vw;
-    margin-top: 4vw;
+    position: relative;
+    top: -47vw;
+    left: 45vw;
 }
 
 .bottom-header {
-    width: 54vw;
     position: relative;
+    top: -50vw;
     left: 45vw;
-    top: -15vw;
 }
 
 .header-text {
     color: #ffffff;
-    display: inline;
-    font-size: 1.5vw;
-    
+    width: 45vw;
+    margin: 0px;
+    font-size: 1.3vw;
 }
 
 .header-hr {
-    width: 36.5vw;
+    width: 40vw;
+    border:0.1px solid white;
     position: relative;
-    left: 31vw;
-    top: -48vw;
-    border: 0.3vw solid white;
+    top: -77vw;
+    left: 51.9vw
 }
 
 button {
-    margin-left: 19vw;
-    margin-top: 3vw;
-    width: 15vw;
-    height: 5vw;
-    font-size: 2vw;
-    font-weight: 600;
-    box-shadow: 0px 0px 20px 10px #121212
+    width: 13vw;
+    height: 4vw;
+    font-size: 1.7vw;
+    font-weight: 700;
+    box-shadow: 0px 0px 20px 10px #121212;
+    position: relative;
+    top: 2vw;
+    left: 17vw;
 }
 
 button:hover {
@@ -106,29 +105,28 @@ button:active {
 }
 
 .introduction-img {
-    position: relative;
-    margin-left: 60vw;
-    margin-top: 0px;
     width: 35vw;
+    position: relative;
+    top: 52vw;
+    left: 5vw;
 }
 
 .introduction {
-    position: relative;
-    top: -40vw;
-    left: 6vw;
     width: 45vw;
-    
+    position: relative;
+    top: 15vw;
+    left: -50vw;
 }
 
 .int-header {
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .about-me {
-    position: relative;
-    top: -35vw;
-    left: 6vw;
     width: 20vw;
+    position: relative;
+    left: -50vw;
+    top: 21vw;
 }
 
 .about-me-header {
@@ -138,45 +136,45 @@ button:active {
 }
 
 .about-portfolio {
-    position: relative;
-    top: -50vw;
-    left: 32vw;
     width: 20vw;
+    position: relative;
+    top: 8.5vw;
+    left: -25vw;
 }
 
 .introduction-hr {
-    position: relative;
-    top: -80vw;
-    left: -35.5vw;
     width: 16vw;
     border: 0.15vw solid #ffffff;
     border-radius: 10px;
+    position: relative;
+    top: -16vw;
+    left: -64.5vw;
 }
 
 .about-me-hr {
-    position: relative;
-    top: -62vw;
-    left: -39.7vw;
-    width: 8vw;
+    width: 7vw;
     border: 0.15vw solid #ffffff;
     border-radius: 10px;
+    position: relative;
+    left: -69vw;
+    top: 0.5vw;
 }
 
 .about-portfolio-hr {
-    position: relative;
-    top: -62.5vw;
-    left: -11.7vw;
     width: 12vw;
     border: 0.15vw solid #ffffff;
     border-radius: 10px;
+    position: relative;
+    left: -41.5vw;
+    top: 0vw;
 }
 
 .introduction-img-hr {
-    position: relative;
-    top: -87.75vw;
-    left: 6.5vw;
-    height: 35vw;
+    height: 34.5vw;
     width: 0px;
     border: 0.25vw solid #ffffff;
     border-radius: 10px;
+    position: relative;
+    left: -22vw;
+    top: -24.62vw;
 }
