@@ -1,3 +1,7 @@
+html {
+    height: 50vw;
+}
+
 body {
 background-color: #222423;
 margin: 0px;
@@ -50,7 +54,7 @@ p {
     color: #ffffff;
 }
 
-img {
+.header-img {
     margin-top: 4vw;
     width: 40vw;
 }
@@ -82,10 +86,10 @@ h1 {
     border:0.1px solid white;
     position: relative;
     top: -77vw;
-    left: 51.9vw
+    left: 55.5vw
 }
 
-button {
+.header-btn {
     width: 13vw;
     height: 4vw;
     font-size: 1.7vw;
@@ -103,19 +107,24 @@ button:hover {
 button:active {
     opacity: 1;
 }
+.section{
+    position: relative;
+    top: 5vw;
+    left: -50vw;
+}
 
 .introduction-img {
     width: 35vw;
     position: relative;
     top: 52vw;
-    left: 5vw;
+    left: 62vw;
 }
 
 .introduction {
     width: 45vw;
     position: relative;
     top: 15vw;
-    left: -50vw;
+    left: 7vw;
 }
 
 .int-header {
@@ -125,21 +134,20 @@ button:active {
 .about-me {
     width: 20vw;
     position: relative;
-    left: -50vw;
+    left: 7vw;
     top: 21vw;
 }
 
 .about-me-header {
     font-size: 2.5vw;
     position: relative;
-    top: -2vw;
 }
 
 .about-portfolio {
     width: 20vw;
     position: relative;
     top: 8.5vw;
-    left: -25vw;
+    left: 32.5vw;
 }
 
 .introduction-hr {
@@ -148,7 +156,7 @@ button:active {
     border-radius: 10px;
     position: relative;
     top: -16vw;
-    left: -64.5vw;
+    left: -7.5vw;
 }
 
 .about-me-hr {
@@ -156,8 +164,8 @@ button:active {
     border: 0.15vw solid #ffffff;
     border-radius: 10px;
     position: relative;
-    left: -69vw;
-    top: 0.5vw;
+    left: -12vw;
+    top: 1.5vw;
 }
 
 .about-portfolio-hr {
@@ -165,16 +173,164 @@ button:active {
     border: 0.15vw solid #ffffff;
     border-radius: 10px;
     position: relative;
-    left: -41.5vw;
-    top: 0vw;
+    left: 16vw;
+    top: 1vw;
 }
 
-.introduction-img-hr {
-    height: 34.5vw;
-    width: 0px;
-    border: 0.25vw solid #ffffff;
-    border-radius: 10px;
+.project {
     position: relative;
-    left: -22vw;
-    top: -24.62vw;
+    left: -95vw;
+}
+
+.project-img {
+    width: 30vw;
+    position: relative;
+    top: 80vw;
+    left: 15.5vw;
+}
+
+.projects{
+    position: relative;
+    left: 58.5vw;
+    top: 105vw;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.project-header {
+    position: relative;
+    top: -2vw;
+}
+
+.projects-btn {
+    position: relative;
+    left: 68vw;
+    top: 110vw;
+    width: 10vw;
+    height: 3.5vw;
+    font-size: 2vw;
+    font-weight: 700;
+    box-shadow: 0px 0px 20px 10px #121212;
+}
+
+.projects-header-hr {
+    position: relative;
+    top: 55vw;
+    left: 58.5vw;
+    width: 27vw;
+}
+
+.project-header-hr {
+    position: relative;
+    top: 65vw;
+    left: 58.5vw;
+    width: 27vw;
+}
+
+.left-hr {
+    position: relative;
+    top: 59vw;
+    left: 36.5vw;
+    width: 14vw;
+}
+
+.right-hr {
+    position: relative;
+    top: 58.5vw;
+    left: 80vw;
+    width: 14vw;
+}
+
+.hr {
+    position: relative;
+    top: 58vw;
+    left: -5.2vw;
+    width: 14vw;
+}
+
+.thank {
+    position: relative;
+    left: -125vw;
+}
+
+.thanks {
+    position: relative;
+    top: 153vw;
+    left: 20vw;
+    width: 22vw;
+}
+
+.thank-you {
+    font-size: 4vw;
+}
+
+.contacts {
+    position: relative;
+    top: 130vw;
+    left: 73vw;
+}
+
+.contact {
+    font-size: 4vw;
+    position: relative;
+    left: -4.5vw;
+}
+
+.center-hr {
+    position: relative;
+    top: 93.5vw;
+    left: 41.6vw;
+    width: 0;
+    height: 41vw;
+    border: 0.15vw solid white;
+
+}
+
+.info {
+    margin-bottom: 3vw;
+    font-size: 1.2vw;
+}
+
+.facebook {
+    width: 3vw;
+    position: relative;
+    left: -4.5vw;
+    top: -18.8vw;
+}
+
+.gmail {
+    width: 4vw;
+    position: relative;
+    left: -8.2vw;
+    top: -14.5vw;
+}
+
+.call {
+    width: 3vw;
+    position: relative;
+    left: -12vw;
+    top: -10.2vw;
+}
+
+.insta {
+    width: 3vw;
+    position: relative;
+    left: -15vw;
+    top: -5.5vw;
+}
+
+footer {
+    position: relative;
+    left: -155vw;
+    text-align: center;
+}
+
+.footer {
+    position: relative;
+    left: 10vw;
+    top: 183vw;
+    width: 100vw;
+    background-color: #3B3B3B;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
 }
