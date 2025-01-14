@@ -1,7 +1,3 @@
-html {
-    height: 50vw;
-}
-
 body {
 background-color: #222423;
 margin: 0px;
@@ -23,7 +19,7 @@ display: flex;
 }
 
 p {
-    font-size: 1vw;
+    font-size: 1dvw;
 }
 
 .nav {
@@ -32,22 +28,22 @@ p {
     background-color: #3B3B3B;
     justify-content: flex-end;
     color: #ffffff;
-    height: 4vw;
+    height: 4dvw;
     align-items: center;
-    width: 100vw;
+    width: 100dvw;
     z-index: 10000000000000;
 }
 
 .dp {
     margin-right: auto;
-    margin-left: 1vw;
+    margin-left: 1dvw;
     font-weight: 600;
-    font-size: 1vw;
+    font-size: 1dvw;
 }
 
 .nav-text {
-    margin-right: 2vw;
-    font-size: 1vw;
+    margin-right: 2dvw;
+    font-size: 1dvw;
 }
 
 .header {
@@ -55,282 +51,350 @@ p {
 }
 
 .header-img {
-    margin-top: 4vw;
-    width: 40vw;
+    margin-top: 4dvw;
+    width: 40dvw;
 }
 
 h1 {
-    margin-right: 10vw;
-    font-size: 8vw;
+    margin-right: 10dvw;
+    font-size: 8dvw;
     font-weight: 900;
     position: relative;
-    top: -47vw;
-    left: 45vw;
+    top: -47dvw;
+    left: 45dvw;
 }
 
 .bottom-header {
     position: relative;
-    top: -50vw;
-    left: 45vw;
+    top: -50dvw;
+    left: 45dvw;
 }
 
 .header-text {
     color: #ffffff;
-    width: 45vw;
+    width: 45dvw;
     margin: 0px;
-    font-size: 1.3vw;
+    font-size: 1.3dvw;
 }
 
 .header-hr {
-    width: 40vw;
-    border:0.1px solid white;
-    position: relative;
-    top: -77vw;
-    left: 55.5vw
+    background-color: white;
+    position: absolute;
+    left: 59vw;
+    top: 14vw;
+    width: 40.4vw;
+    height: 0.1vw;
+    scale: 3.5 1;
+    transform-origin: right;
+    animation: scroll linear;
+    animation-timeline: view();
+}
+
+@keyframes scroll {
+    to {scale: 0 1}
 }
 
 .header-btn {
-    width: 13vw;
-    height: 4vw;
-    font-size: 1.7vw;
+    width: 13dvw;
+    height: 4dvw;
+    font-size: 1.7dvw;
     font-weight: 700;
     box-shadow: 0px 0px 20px 10px #121212;
     position: relative;
-    top: 2vw;
-    left: 17vw;
+    top: 2dvw;
+    left: 17dvw;
 }
 
-button:hover {
-    opacity: 0.7;
+.header-btn:hover {
+    opacity: 0;
 }
 
-button:active {
+.header-btn:active {
     opacity: 1;
 }
 .section{
     position: relative;
-    top: 5vw;
-    left: -50vw;
+    top: 5dvw;
+    left: -50dvw;
 }
 
 .introduction-img {
-    width: 35vw;
+    width: 35dvw;
     position: relative;
-    top: 52vw;
-    left: 62vw;
+    top: 52dvw;
+    left: 62dvw;
 }
 
 .introduction {
-    width: 45vw;
+    width: 45dvw;
     position: relative;
-    top: 15vw;
-    left: 7vw;
+    top: 15dvw;
+    left: 7dvw;
 }
 
 .int-header {
-    font-size: 4vw;
+    font-size: 4dvw;
 }
 
 .about-me {
-    width: 20vw;
+    width: 20dvw;
     position: relative;
-    left: 7vw;
-    top: 21vw;
+    left: 7dvw;
+    top: 21dvw;
 }
 
 .about-me-header {
-    font-size: 2.5vw;
+    font-size: 2.5dvw;
     position: relative;
 }
 
 .about-portfolio {
-    width: 20vw;
+    width: 20dvw;
     position: relative;
-    top: 8.5vw;
-    left: 32.5vw;
+    top: 8.5dvw;
+    left: 32.5dvw;
 }
 
 .introduction-hr {
-    width: 16vw;
-    border: 0.15vw solid #ffffff;
+    width: 16dvw;
+    border: 0.15dvw solid #ffffff;
     border-radius: 10px;
-    position: relative;
-    top: -16vw;
-    left: -7.5vw;
+    position: absolute;
+    top: 58.5dvw;
+    left: 7dvw;
 }
 
 .about-me-hr {
-    width: 7vw;
-    border: 0.15vw solid #ffffff;
+    width: 7dvw;
+    border: 0.15dvw solid #ffffff;
     border-radius: 10px;
-    position: relative;
-    left: -12vw;
-    top: 1.5vw;
+    position: absolute;
+    left: 7dvw;
+    top: 77dvw;
 }
 
 .about-portfolio-hr {
-    width: 12vw;
-    border: 0.15vw solid #ffffff;
+    width: 12dvw;
+    border: 0.15dvw solid #ffffff;
     border-radius: 10px;
-    position: relative;
-    left: 16vw;
-    top: 1vw;
+    position: absolute;
+    left: 32.5dvw;
+    top: 77dvw;
 }
 
 .project {
     position: relative;
-    left: -95vw;
+    left: -95dvw;
 }
 
 .project-img {
-    width: 30vw;
+    width: 30dvw;
     position: relative;
-    top: 80vw;
-    left: 15.5vw;
+    top: 80dvw;
+    left: 15.5dvw;
 }
 
 .projects{
     position: relative;
-    left: 58.5vw;
-    top: 105vw;
-    font-size: 3vw;
+    left: 58.5dvw;
+    top: 105dvw;
+    font-size: 3dvw;
     text-align: center;
 }
 
 .project-header {
     position: relative;
-    top: -2vw;
+    top: -2dvw;
 }
 
 .projects-btn {
     position: relative;
-    left: 68vw;
-    top: 110vw;
-    width: 10vw;
-    height: 3.5vw;
-    font-size: 2vw;
+    left: 68dvw;
+    top: 110dvw;
+    width: 10dvw;
+    height: 3.5dvw;
+    font-size: 2dvw;
     font-weight: 700;
     box-shadow: 0px 0px 20px 10px #121212;
 }
 
+.projects-btn:hover {
+    opacity: 0.7;
+}
+
+.projects-btn:active {
+    opacity: 1;
+}
+
 .projects-header-hr {
-    position: relative;
-    top: 55vw;
-    left: 58.5vw;
-    width: 27vw;
+    border: 0.1vw solid white;
+    position: absolute;
+    top: 114dvw;
+    left: 59.4dvw;
+    width: 28dvw;
 }
 
 .project-header-hr {
-    position: relative;
-    top: 65vw;
-    left: 58.5vw;
-    width: 27vw;
+    border: 0.1vw solid white;
+    position: absolute;
+    top: 125dvw;
+    left: 59.4dvw;
+    width: 28dvw;
 }
 
 .left-hr {
-    position: relative;
-    top: 59vw;
-    left: 36.5vw;
-    width: 14vw;
+    border: 0.1vw solid white;
+    position: absolute;
+    top: 119.8dvw;
+    left: 44.5dvw;
+    width: 14dvw;
 }
 
 .right-hr {
-    position: relative;
-    top: 58.5vw;
-    left: 80vw;
-    width: 14vw;
+    border: 0.1vw solid white;
+    position: absolute;
+    top: 119.8dvw;
+    left: 88.3dvw;
+    width: 13.5dvw;
 }
 
 .hr {
-    position: relative;
-    top: 58vw;
-    left: -5.2vw;
-    width: 14vw;
+    border: 0.1vw solid white;
+    position: absolute;
+    top: 119.8dvw;
+    left: 2.5vw;
+    width: 14dvw;
 }
 
 .thank {
     position: relative;
-    left: -125vw;
+    left: -125dvw;
 }
 
 .thanks {
     position: relative;
-    top: 153vw;
-    left: 20vw;
-    width: 22vw;
+    top: 152dvw;
+    left: 17dvw;
+    width: 22dvw;
 }
 
 .thank-you {
-    font-size: 4vw;
+    font-size: 4dvw;
 }
 
 .contacts {
     position: relative;
-    top: 130vw;
-    left: 73vw;
+    top: 130dvw;
+    left: 73dvw;
 }
 
 .contact {
-    font-size: 4vw;
+    font-size: 4dvw;
     position: relative;
-    left: -4.5vw;
+    left: -4.5dvw;
+    top: -1.5vw;
 }
 
 .center-hr {
-    position: relative;
-    top: 93.5vw;
-    left: 41.6vw;
+    position: absolute;
+    top: 141dvw;
+    left: 52.5dvw;
     width: 0;
-    height: 41vw;
-    border: 0.15vw solid white;
-
+    height: 42dvw;
+    animation: opacity linear;
+    border: 0.15dvw solid white;
 }
 
 .info {
-    margin-bottom: 3vw;
-    font-size: 1.2vw;
+    margin-bottom: 3.5dvw;
+    font-size: 1.2dvw;
 }
 
 .facebook {
-    width: 3vw;
-    position: relative;
-    left: -4.5vw;
-    top: -18.8vw;
+    width: 3dvw;
+    position: absolute;
+    left: -4.5dvw;
+    top: 7dvw;
 }
 
 .gmail {
-    width: 4vw;
-    position: relative;
-    left: -8.2vw;
-    top: -14.5vw;
+    width: 4dvw;
+    position: absolute;
+    left: -5dvw;
+    top: 11.7dvw;
 }
 
 .call {
-    width: 3vw;
-    position: relative;
-    left: -12vw;
-    top: -10.2vw;
+    width: 3dvw;
+    position: absolute;
+    left: -4.5dvw;
+    top: 16.9dvw;
 }
 
 .insta {
-    width: 3vw;
-    position: relative;
-    left: -15vw;
-    top: -5.5vw;
+    width: 3dvw;
+    position: absolute;
+    left: -4.5dvw;
+    top: 21.5dvw;
+}
+
+.contact-hr {
+    position: absolute;
+    top: 4dvw;
+    left: -4dvw;
+    border: 0.15dvw solid white;
+    border-radius: 15px;
+    width: 14vw;
+}
+
+.top-hr {
+    border: 0.1vw solid white;
+    position: absolute;
+    top: -15.1dvw;
+    left: 10.5dvw;
+    width: 0;
+    height: 13.5dvw;
+    animation: opacity linear;
+}
+
+.bottom-hr {
+    border: 0.1vw solid white;
+    position: absolute;
+    top: 14dvw;
+    left: 10.5dvw;
+    width: 0;
+    height: 15dvw;
+    z-index: -1;
+    animation: opacity linear;
+    animation-timeline: view();
+}
+
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.thanks-hr {
+    position: absolute;
+    top: 5.5dvw;
+    left: 0.7dvw;
+    width: 19dvw;
+    border: 0.1vw solid white;
+    border-radius: 10px;
 }
 
 footer {
     position: relative;
-    left: -155vw;
+    left: -155dvw;
     text-align: center;
 }
 
 .footer {
     position: relative;
-    left: 10vw;
-    top: 183vw;
-    width: 100vw;
+    left: 10dvw;
+    top: 183dvw;
+    width: 100dvw;
     background-color: #3B3B3B;
-    padding-top: 0.2vw;
-    padding-bottom: 0.2vw;
+    padding-top: 0.2dvw;
+    padding-bottom: 0.2dvw;
 }
