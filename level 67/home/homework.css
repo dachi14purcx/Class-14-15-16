@@ -44,6 +44,14 @@ p {
 .nav-text {
     margin-right: 2dvw;
     font-size: 1dvw;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.nav-text:hover {
+    scale: 1.5;
+    font-weight: 700;
 }
 
 .header {
@@ -103,15 +111,20 @@ h1 {
     position: relative;
     top: 2dvw;
     left: 17dvw;
+    z-index: 100;
+    transition: 0.5s;
 }
 
 .header-btn:hover {
-    opacity: 0;
+    opacity: 0.7;
+    scale: 1.5;
 }
 
 .header-btn:active {
     opacity: 1;
 }
+
+
 .section{
     position: relative;
     top: 5dvw;
@@ -123,6 +136,14 @@ h1 {
     position: relative;
     top: 52dvw;
     left: 62dvw;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: 0vw 30vw;
+}
+
+@keyframes appear {
+    from {opacity: 0; scale: 0.5;}
+    to {opacity: 1; scale: 1;}
 }
 
 .introduction {
@@ -162,7 +183,17 @@ h1 {
     position: absolute;
     top: 58.5dvw;
     left: 7dvw;
+    transform-origin: left;
+    animation: line linear;
+    animation-timeline: view();
+    animation-range: 0vw 35vw;
+    scale: 0;
 }
+
+@keyframes line {
+    to {scale: 1}
+}
+
 
 .about-me-hr {
     width: 7dvw;
@@ -297,12 +328,14 @@ h1 {
 
 .center-hr {
     position: absolute;
-    top: 141dvw;
+    top: 142.2dvw;
     left: 52.5dvw;
     width: 0;
     height: 42dvw;
-    animation: opacity linear;
     border: 0.15dvw solid white;
+    animation: opacity linear;
+    animation-timeline: view();
+    animation-range: 0vw contain;
 }
 
 .info {
@@ -350,11 +383,13 @@ h1 {
 .top-hr {
     border: 0.1vw solid white;
     position: absolute;
-    top: -15.1dvw;
+    top: -13.2dvw;
     left: 10.5dvw;
     width: 0;
-    height: 13.5dvw;
+    height: 13dvw;
     animation: opacity linear;
+    animation-timeline: view();
+    animation-range: 0vw contain;
 }
 
 .bottom-hr {
@@ -365,8 +400,6 @@ h1 {
     width: 0;
     height: 15dvw;
     z-index: -1;
-    animation: opacity linear;
-    animation-timeline: view();
 }
 
 @keyframes opacity {
@@ -397,4 +430,10 @@ footer {
     background-color: #3B3B3B;
     padding-top: 0.2dvw;
     padding-bottom: 0.2dvw;
+}
+
+@media (max-width: 768px){
+    .header-btn {
+        font-size: 1.3dvw;
+    }
 }
