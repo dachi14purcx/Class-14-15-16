@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="homework.css">
 </head>
 <body>
-    <header>
+    <header id="home">
         <div class="nav">
             <h3 class="dp">Dachi Purtskhvanidze</h3>
-            <p class="nav-text">Home</h3>
-            <p class="nav-text">About me</h3>
-            <p class="nav-text">Project</h3>
-            <p class="nav-text">Contact</h3>
+            <a href="#home" class="nav-text">Home</a>  
+            <a href="#about-me" class="nav-text">About me</a>
+            <a href="#projects" class="nav-text">Project</a>
+            <a href="#contact" class="nav-text">Contact</a>
         </div>
 
         <div class="header">
@@ -23,17 +23,26 @@
             <div class="bottom-header">
                 <p class="header-text">This is my portfolio where I will write about myself, my future profession and my path to this.</p>
                 <br>
-                <button class="header-btn">Explore Now</button>
+
+                <div class="skills">
+                    <p>Front end</p>
+                    <p>Back end</p>
+                    <p>UI design</p>
+                    <p>Html</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>Python</p>
+                </div>
             </div> 
         </div>
         
         <div class="header-hr">&nbsp;<div>
     </header>
 
-    <section class="section">
-        <img src="image1.png" alt="comuter image" class="introduction-img"> 
-        <div class="introduction">
-            <h2 class="int-header">Introduction</h2>
+    <section class="section" >
+        <img src="image1.png" alt="comuter image" class="introduction-img" id="about-me"> 
+        <div class="introduction" >
+            <h2 class="int-header" >Introduction</h2>
             <p>Welcome to my portfolio! Here, you'll find a curated collection of my work, showcasing my skills, creativity, and dedication to web development. Each piece represents not just my technical abilities but also my passion for web development and my commitment to excellence.</p>
         </div>
  
@@ -53,14 +62,14 @@
         <div class="about-portfolio-hr"></div>
     </section>
 
-    <section class="project">
-        <div class="projects">
+    <section class="project" >
+        <div class="projects" id="projects">
         <h2 class="project-header">Projects</h2>
         
         <p>I have started learning in GOA several months ago. I have been studying by passion and have made all of the projects I had for homework and classwork. They are too much to show separately so I will link my git hub and you can see it all by yourselves</p>
        </div>
     
-        <button class="projects-btn">GitHub</button>
+        <a href="https://github.com/dachi14purcx" target="_blank"><button class="projects-btn">GitHub</button></a>
 
         <img src="image (1).png" alt="GitHub img" class="project-img">
 
@@ -72,7 +81,7 @@
     </section>
 
     <section class="thank">
-        <div class="thanks">
+        <div class="thanks" id="contact">
             <h2 class="thank-you">Thank you</h2>
             <p>Thank you for reading my portfolio, Hope you enjoyed reading it. I wish that you would like to cooperate with me and make crazy websites if it will be like this here are my contact informations</p>            
             <div class="top-hr"></div>
