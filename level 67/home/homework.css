@@ -4,6 +4,7 @@ margin: 0px;
 font-family: sans-serif;
 color: white;
 display: flex;
+overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
