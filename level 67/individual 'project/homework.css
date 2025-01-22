@@ -91,7 +91,6 @@ h1 {
 
 .header-text {
     color: #ffffff;
-    width: 45dvw;
     margin: 0px;
     font-size: 1.3dvw;
 }
@@ -99,9 +98,9 @@ h1 {
 .header-hr {
     background-color: white;
     position: absolute;
-    left: 7dvw;
+    left: 5dvw;
     top: 14dvw;
-    width: 90.4dvw;
+    width: 95.4dvw;
     height: 0.1dvw;
     scale: 1 1;
     transform-origin: right;
@@ -541,41 +540,484 @@ footer {
     }
 }
 
-@media (max-width: 426px){
+@media (max-width: 431px){
+    body {
+        position: relative;
+        left: 4vw;
+        background-color: #222423;
+        margin: 0px;
+        font-family: sans-serif;
+        color: white;
+        display: flex;
+        overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #1e1e1e;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #3B3B3B;
+    }
+
+    p {
+        font-size: 3.5dvw;
+    }
+
+    .nav {
+        width: 0dvw;
+    }
+
+    .dp {
+        margin-right: auto;
+        margin-left: 1dvw;
+        font-weight: 600;
+        font-size: 1dvw;
+    }
+
+    .nav-text {
+        margin-right: 2dvw;
+        font-size: 1dvw;
+        text-decoration: none;
+        color: white;
+        transition: 0.5s;
+    }
+
+    .nav-text:hover {
+        scale: 1.5;
+        font-weight: 700;
+        opacity: 0;
+    }
+
+    .header {
+        color: #ffffff;
+    }
+
+    .header-img {
+        margin-top: 0dvw;
+        width: 190dvw;
+        opacity: 0.6;
+        position: relative;
+        left: -60vw;
+        z-index: 0;
+        animation: header-img-animation linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0vw 0vw;
+    }
+
+    @keyframes header-img-animation {
+        to { scale: 1; opacity: 1;}
+    }
+
+    h1 {
+        margin-right: 100dvw;
+        font-size: 20dvw;
+        font-weight: 900;
+        position: relative;
+        top: -210dvw;
+        left: 2dvw;
+    }
+
+    .bottom-header {
+        position: relative;
+        top: -200dvw;
+        left: 7dvw;
+        width: 90vw;
+        height: 23vw;
+        overflow: visible;
+    }
+
+    .header-text {
+        color: #ffffff;
+        margin: 0px;
+        font-size: 5.3dvw;
+    }
+
     .header-hr {
         background-color: white;
         position: absolute;
-        left: 9vw;
-        top: 14vw;
-        width: 90.4vw;
-        height: 0.1vw;
-        scale: 3 1;
+        left: -600dvw;
+        top: 32dvw;
+        width: 780dvw;
+        height: 0.5dvw;
+        scale: 1 1;
         transform-origin: right;
         animation: scroll ease-in;
         animation-timeline: view();
+    }
+
+    @keyframes scroll {
+        to {scale: 0 1}
     }
 
     .skills {
         position: absolute;
-        left: -25vw;
-        top: 7vw;
-        white-space: nowrap;
+        left: -4vw;
+        top: 45vw;
+        white-space: wrap;
         animation: skills linear;
         animation-timeline: scroll(root);
     }
-}
 
-@media (max-width: 376px){
-    .header-hr {
-        background-color: white;
-        position: absolute;
-        left: 9vw;
-        top: 14vw;
-        width: 90.4vw;
-        height: 0.1vw;
-        scale: 3.5 1;
-        transform-origin: right;
-        animation: scroll ease-in;
+    @keyframes skills {
+        to {translate: calc(50% + 80vw)}
+    }
+
+    div.skills p {
+        font-size: 4.5vw;
+        margin: 2vw;
+        display: inline-block;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding: 1vw;
+        box-shadow: 0vw 0vw 2vw #000000;
+    }
+
+
+    .section{
+        position: relative;
+        top: 200dvw;
+        left: -194dvw;
+    }
+
+    .introduction-img {
+        width: 65dvw;
+        position: relative;
+        top: 185dvw;
+        left: 18dvw;
+        animation: appear linear;
         animation-timeline: view();
+        animation-range: 0vw 35vw;
+    }
+
+    @keyframes appear {
+        from {opacity: 0; scale: 0.5;}
+        to {opacity: 1; scale: 1;}
+    }
+
+    .introduction {
+        width: 96dvw;
+        position: relative;
+        top: -20dvw;
+        left: 3dvw;
+    }
+
+    .int-header {
+        font-size: 11dvw;
+        position: relative;
+        left: 15vw;
+    }
+
+    .about-me {
+        width: 45dvw;
+        position: relative;
+        left: 4dvw;
+        top: 6dvw;
+    }
+
+    .about-me-header {
+        font-size: 5.5dvw;
+        position: relative;
+    }
+
+    .about-portfolio {
+        width: 44dvw;
+        position: relative;
+        top: -36.5dvw;
+        left: 55dvw;
+    }
+
+    .introduction-hr {
+        width: 63dvw;
+        border: 0.45dvw solid #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        top: 70dvw;
+        left: 18dvw;
+        transform-origin: left;
+        animation: line linear forwards;
+        animation-timeline: view();
+        animation-range: 0vw 30vw;
+        scale: 0;
+    }
+
+    @keyframes line {
+        to {scale: 1}
+    }
+
+
+    .about-me-hr {
+        width: 24dvw;
+        border: 0.45dvw solid #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        left: 4dvw;
+        top: 137dvw;
+        transform-origin: left;
+        animation: line linear forwards;
+        animation-timeline: view();
+        animation-range: 0vw 10vw;
+        scale: 0;
+    }
+
+    .about-portfolio-hr {
+        width: 39dvw;
+        border: 0.45dvw solid #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        left: 55vw;
+        top: 137.2dvw;
+        transform-origin: left;
+        animation: line linear forwards;
+        animation-timeline: view();
+        animation-range: 0vw 10vw;
+        scale: 0;
+    }
+
+    .project {
+        position: relative;
+        left: -290dvw;
+    }
+
+    .project-img {
+        width: 0dvw;
+    }
+
+    .projects{
+        position: relative;
+        left: 20dvw;
+        top: 535dvw;
+        width: 60dvw;
+        text-align: start;
+    }
+
+    .project-header {
+        position: relative;
+        top: -2dvw;
+        left: 5dvw;
+        font-size: 12dvw;
+    }
+
+    .projects-btn {
+        position: relative;
+        left: 40.5dvw;
+        top: 545dvw;
+        width: 18dvw;
+        height: 7.5dvw;
+        font-size: 3dvw;
+        font-weight: 700;
+        box-shadow: 0px 0px 20px 10px #121212;
+        transition: 0.5s;
+        transform-origin: left;
+        animation: btn linear forwards;
+        animation-timeline: view();
+        animation-range: -20vw 3vw;
+    }
+
+    .projects-btn:hover {
+        opacity: 0.7;
+        scale: 1.1;
+    }
+
+    @keyframes btn {
+        to {translate: 0 -8vw;}
+    }
+
+    .projects-btn:active {
+        opacity: 1;
+    }
+
+    .projects-header-hr {
+        border: 0.35vw solid white;
+        position: absolute;
+        top: 562.5dvw;
+        left: 20dvw;
+        width: 60dvw;
+        animation: line linear forwards;
+        animation-timeline: view();
+        animation-range: 0vw 27vw;
+        scale: 0;
+    }
+
+    .project-header-hr {
+        border: 0.1vw solid white;
+        position: absolute;
+        top: 465dvw;
+        left: 50dvw;
+        width: 0dvw;
+        height: 75vw;
+        animation: line linear forwards;
+        animation-timeline: view();
+        animation-range: 0vw 15vw;
+        scale: 0;
+    }
+
+    .left-hr {
+        width: 0dvw;
+        height: 75dvw;
+        top: 615dvw;
+        left: 50dvw;
+    }
+
+    .right-hr {
+        width: 0dvw;
+    }
+
+    .hr {
+        width: 0dvw;
+    }
+
+    .thank {
+        position: relative;
+        left: -350dvw;
+    }
+
+    .thanks {
+        position: relative;
+        top: 702dvw;
+        left: 6dvw;
+        width: 95dvw;
+    }
+
+    .thank-you {
+        font-size: 11dvw;
+        position: relative;
+        left: 15vw;
+    }
+
+    .contacts {
+        position: relative;
+        top: 730dvw;
+        left: 35dvw;
+    }
+
+    .contact {
+        font-size: 11dvw;
+        position: relative;
+        top: -1.5vw;
+    }
+
+    .center-hr {
+        position: absolute;
+        top: 142.2dvw;
+        left: 52.5dvw;
+        width: 0;
+        height: 42dvw;
+        border: 0.15dvw solid white;
+        opacity: 0;
+        animation: opacity ease-in;
+        animation-timeline: view();
+        animation-range:  15vw 50vw;
+    }
+
+    .info {
+        margin-bottom: 7.5dvw;
+        font-size: 3.7dvw;
+    }
+
+    .facebook {
+        width: 7dvw;
+        position: absolute;
+        left: -8.5dvw;
+        top: 20dvw;
+    }
+
+    .gmail {
+        width: 8dvw;
+        position: absolute;
+        left: -9dvw;
+        top: 32dvw;
+    }
+
+    .call {
+        width: 7dvw;
+        position: absolute;
+        left: -8.5dvw;
+        top: 44dvw;
+    }
+
+    .insta {
+        width: 7dvw;
+        position: absolute;
+        left: -8.5dvw;
+        top: 56dvw;
+    }
+
+    .contact-hr {
+        position: absolute;
+        top: -20dvw;
+        left: -100dvw;
+        border: 0.5dvw solid white;
+        border-radius: 15px;
+        width: 170vw;
+        animation: line linear forwards;
+        animation-timeline: view();
+        animation-range: 0vw 30vw;
+        scale: 0;
+    }
+
+    .top-hr {
+        border: 0.1vw solid white;
+        position: absolute;
+        top: -13.2dvw;
+        left: 10.5dvw;
+        width: 0;
+        height: 0dvw;
+        animation: opacity linear;
+        opacity: 0;
+        animation-timeline: view();
+        animation-range: contain;
+    }
+
+    .bottom-hr {
+        border: 0.1vw solid white;
+        position: absolute;
+        top: 14dvw;
+        left: 10.5dvw;
+        width: 0;
+        height: 0dvw;
+        z-index: -1;
+        opacity: 0;
+        animation: opacity linear forwards;
+        animation-timeline: view();
+        animation-range: 0vw 25vw;
+    }
+
+    @keyframes opacity {
+        to {opacity: 0;}
+    }
+
+    .thanks-hr {
+        position: absolute;
+        top: 5.5dvw;
+        left: 0dvw;
+        width: 0dvw;
+        opacity: 0;
+        border: 0.1vw solid white;
+        border-radius: 10px;
+        animation: line linear forwards;
+        animation-timeline: view();
+        animation-range: 0vw 27vw;
+        scale: 0;
+    }
+
+    footer {
+        position: relative;
+        left: -155dvw;
+        text-align: center;
+    }
+
+    .footer {
+        position: relative;
+        left: -289.5dvw;
+        top: 900dvw;
+        width: 100dvw;
+        background-color: #3B3B3B;
+        padding-top: 0.2dvw;
+        padding-bottom: 0.2dvw;
     }
 }
