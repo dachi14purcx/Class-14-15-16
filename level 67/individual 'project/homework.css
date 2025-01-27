@@ -4,7 +4,7 @@ margin: 0px;
 font-family: sans-serif;
 color: white;
 display: flex;
-overflow-x: hidden;
+overflow-x: clip;
 }
 
 ::-webkit-scrollbar {
@@ -136,7 +136,7 @@ div.skills p {
 }
 
 
-.section{
+.int{
     position: relative;
     top: 5dvw;
     left: -50dvw;
@@ -549,7 +549,7 @@ footer {
         font-family: sans-serif;
         color: white;
         display: flex;
-        overflow-x: hidden;
+        overflow-x: clip;
     }
 
     ::-webkit-scrollbar {
