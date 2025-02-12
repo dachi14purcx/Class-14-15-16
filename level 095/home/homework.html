@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მონაცემების დამატება</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .records {
+            margin-top: 30px;
+        }
+        .record {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>მონაცემების დამატება</h2>
+        <form id="data-form">
+            <input type="text" id="first-name" placeholder="სახელი" required>
+            <input type="text" id="last-name" placeholder="გვარი" required>
+            <input type="number" id="age" placeholder="ასაკი" required>
+            <input type="number" id="id" placeholder="პირადი ნომერი" required>
+            <input type="number" id="height" placeholder="სიმაღლე (სმ)" required>
+            <textarea id="description" placeholder="აღწერა" rows="4" required></textarea>
+            <button type="submit">ჩანაწერის დამატება</button>
+        </form>
+
+        <div class="records" id="records">
+            <!-- დამატებული ჩანაწერები აქ გამოჩნდება -->
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('data-form');
+        const recordsContainer = document.getElementById('records');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const age = document.getElementById('age').value;
+            const id = document.getElementById('id').value;
+            const height = document.getElementById('height').value;
+            const description = document.getElementById('description').value;
+
+            // ავტომატური ელ. ფოსტის გენერაცია
+            const randomElement = Math.floor(Math.random() * 1000);
+            const email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}.${age}${randomElement}@example.com`;
+
+            // ახალი ჩანაწერის დამატება
+            const record = document.createElement('div');
+            record.classList.add('record');
+            record.innerHTML = `
+                <strong>${firstName} ${lastName}</strong> (ID: ${id})
+                <p><strong>ასაკი:</strong> ${age}</p>
+                <p><strong>სიმაღლე:</strong> ${height} სმ</p>
+                <p><strong>აღწერა:</strong> ${description}</p>
+                <p><strong>ელ. ფოსტა:</strong> ${email}</p>
+            `;
+            recordsContainer.appendChild(record);
+
+            // ფორმის გამშვები ველები გამოკლებით
+            form.reset();
+        });
+    </script>
+</body>
+</html>
