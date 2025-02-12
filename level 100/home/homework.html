@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advice Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0f172a;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .advice-number {
+            color: #10b981;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .advice-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #10b981;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="advice-number">Advice #<span id="advice-id">...</span></div>
+        <div class="advice-text" id="advice-text">Loading...</div>
+        <button class="button" onclick="fetchAdvice()">🎲</button>
+    </div>
+
+    <script>
+        async function fetchAdvice() {
+            try {
+                const response = await fetch('https://api.adviceslip.com/advice');
+                const data = await response.json();
+                document.getElementById('advice-id').textContent = data.slip.id;
+                document.getElementById('advice-text').textContent = `"${data.slip.advice}"`;
+            } catch (error) {
+                document.getElementById('advice-text').textContent = "Failed to load advice.";
+            }
+        }
+        
+        fetchAdvice();
+    </script>
+</body>
+</html>
