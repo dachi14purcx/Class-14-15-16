@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 150px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="stats-container"></div>
+    
+    <script>
+        class Statistic {
+            constructor(title, value) {
+                this.title = title;
+                this.value = value;
+            }
+        }
+
+        const stats = [
+            new Statistic("Users", 1200),
+            new Statistic("Sales", 350),
+            new Statistic("Revenue", "$45,000")
+        ];
+
+        const container = document.getElementById("stats-container");
+        
+        stats.forEach(stat => {
+            const card = document.createElement("div");
+            card.className = "card";
+            
+            const title = document.createElement("div");
+            title.className = "title";
+            title.textContent = stat.title;
+            
+            const value = document.createElement("div");
+            value.className = "value";
+            value.textContent = stat.value;
+            
+            card.appendChild(title);
+            card.appendChild(value);
+            container.appendChild(card);
+        });
+    </script>
+</body>
+</html>
