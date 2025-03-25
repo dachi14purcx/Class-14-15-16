@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #hint {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guess the Number</h1>
+  <p>Guess a number between 1 and 20:</p>
+  <input type="number" id="guessInput" placeholder="Enter your guess">
+  <button onclick="checkGuess()">Submit Guess</button>
+  <div id="hint"></div>
+
+  <script>
+    const randomNumber = Math.floor(Math.random() * 10);
+    console.log("The random number is:", randomNumber);
+
+    function checkGuess() {
+      const userGuess = parseInt(document.getElementById("guessInput").value);
+      const hintDiv = document.getElementById("hint");
+
+      if (isNaN(userGuess)) {
+        hintDiv.innerHTML = "Please enter a valid number.";
+        return;
+      }
+
+      if (userGuess < randomNumber) {
+        hintDiv.innerHTML = "Too low! Try again.";
+      } else if (userGuess > randomNumber) {
+        hintDiv.innerHTML = "Too high! Try again.";
+      } else {
+        hintDiv.innerHTML = `<strong>Congratulations! You guessed it right!</strong>`;
+      }
+    }
+  </script>
+</body>
+</html>
