@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: hsl(0, 0%, 8%);
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            background-color: hsl(0, 0%, 12%);
+            border-radius: 2%;
+            width: 350px;
+            padding: 30px;
+        }
+
+        img {
+            border-radius: 100%;
+            width: 100px;
+        }
+
+        .name {
+            color: white;
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
+        .place {
+            color: hsl(75, 94%, 57%);
+            margin-bottom: 0;
+        }
+
+        .prof {
+            color: white;
+        }
+
+        button {
+            background-color: hsl(0, 0%, 20%);
+            border: 0;
+            margin: 8px;
+            color: white;
+            width: 97%;
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .container{
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="avatar-jessica.jpeg" alt="">
+        <p class="name">Jessica Randall</p>
+        <p class="place">London, United Kingdom</p>
+        <p class="prof">"Front-end developer and avid reader."</p>
+        <button>GitHub</button>
+        <button>Frontend Mentor</button>
+        <button>LinkedIn</button>
+        <button>Twitter</button>
+        <button>Instagram</button>
+    </div>
+</body>
+</html>
