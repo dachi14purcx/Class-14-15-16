@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Latest News</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    .news-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+    .card { border: 1px solid #ccc; padding: 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Latest News</h1>
+  <input type="text" id="query" placeholder="Search news...">
+  <button onclick="getNews()">Search</button>
+  <div id="news" class="news-container"></div>
+
+  <script>
+    const apiKey = 'YOUR_NEWSAPI_KEY';
+    async function getNews() {
+      const query = document.getElementById('query').value || 'latest';
+      try {
+        const res = await fetch(`https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`);
+        const data = await res.json();
+        const newsDiv = document.getElementById('news');
+        newsDiv.innerHTML = '';
+        data.articles.forEach(article => {
+          const el = document.createElement('div');
+          el.className = 'card';
+          el.innerHTML = `<h4>${article.title}</h4><p>${article.description || ''}</p><a href="${article.url}" target="_blank">Read more</a>`;
+          newsDiv.appendChild(el);
+        });
+      } catch (err) {
+        alert('Error fetching news');
+      }
+    }
+
+    // Load latest on page load
+    window.onload = getNews;
+  </script>
+</body>
+</html>

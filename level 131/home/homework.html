@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7-Day Weather Forecast</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    .forecast { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .day { border: 1px solid #ccc; padding: 10px; width: 150px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>7-Day Weather Forecast</h1>
+  <input type="text" id="city" placeholder="Enter city name">
+  <button onclick="getWeather()">Get Forecast</button>
+  <div id="forecast" class="forecast"></div>
+
+  <script>
+    const apiKey = 'YOUR_OPENWEATHER_API_KEY';
+    async function getWeather() {
+      const city = document.getElementById('city').value;
+      try {
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`);
+        const data = await res.json();
+        const forecastDiv = document.getElementById('forecast');
+        forecastDiv.innerHTML = '';
+
+        const daily = {};
+        data.list.forEach(item => {
+          const date = item.dt_txt.split(' ')[0];
+          if (!daily[date]) {
+            daily[date] = item;
+          }
+        });
+
+        Object.entries(daily).slice(0, 7).forEach(([date, item]) => {
+          const el = document.createElement('div');
+          el.className = 'day';
+          el.innerHTML = `<h4>${date}</h4><p>Temp: ${item.main.temp}°C</p><p>Humidity: ${item.main.humidity}%</p>`;
+          forecastDiv.appendChild(el);
+        });
+      } catch (err) {
+        alert('City not found or API error');
+      }
+    }
+  </script>
+</body>
+</html>

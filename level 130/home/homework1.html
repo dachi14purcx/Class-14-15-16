@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>ხუმრობა & რჩევა</h2>
+  <select id="category">
+    <option value="Programming">Programming</option>
+    <option value="Misc">Misc</option>
+    <option value="Pun">Pun</option>
+    <option value="Spooky">Spooky</option>
+  </select>
+  <button onclick="getData()">გადატვირთე</button>
+  <div id="output"></div>
+
+  <script>
+    async function getData() {
+      const category = document.getElementById("category").value;
+      const output = document.getElementById("output");
+      try {
+        const jokeRes = await fetch(`https://v2.jokeapi.dev/joke/${category}?safe-mode`);
+        const joke = await jokeRes.json();
+
+        const adviceRes = await fetch("https://api.adviceslip.com/advice");
+        const adviceData = await adviceRes.json();
+
+        let jokeText = joke.type === "single" ? joke.joke : `${joke.setup} - ${joke.delivery}`;
+        output.innerHTML = `
+          <p><strong>ხუმრობა:</strong> ${jokeText}</p>
+          <p><strong>რჩევა:</strong> ${adviceData.slip.advice}</p>
+        `;
+      } catch (err) {
+        output.innerHTML = "შეცდომა დატვირთვაში ❌";
+      }
+    }
+  </script>
+</body>
+</html>

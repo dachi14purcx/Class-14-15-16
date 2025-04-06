@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Shop</title>
+</head>
+<body>
+  <h1>Online Shop</h1>
+  <div id="auth-section"></div>
+  <div id="shop-section" style="display:none;"></div>
+  <div id="cart-section"></div>
+
+  <script type="module">
+    import { registerUser, loginUser, checkAuth } from './Auth.js';
+    import { renderShop, getProducts } from './Shop.js';
+    import { renderCart, addToCart } from './Cart.js';
+
+    const authDiv = document.getElementById('auth-section');
+    const shopDiv = document.getElementById('shop-section');
+    const cartDiv = document.getElementById('cart-section');
+
+    if (!checkAuth()) {
+      authDiv.innerHTML = `
+        <h2>Register</h2>
+        <input id="reg-user" placeholder="Username">
+        <input id="reg-pass" placeholder="Password" type="password">
+        <button onclick="register()">Register</button>
+        <h2>Login</h2>
+        <input id="log-user" placeholder="Username">
+        <input id="log-pass" placeholder="Password" type="password">
+        <button onclick="login()">Login</button>
+      `;
+
+      window.register = () => {
+        const u = document.getElementById('reg-user').value;
+        const p = document.getElementById('reg-pass').value;
+        registerUser(u, p);
+        location.reload();
+      };
+
+      window.login = () => {
+        const u = document.getElementById('log-user').value;
+        const p = document.getElementById('log-pass').value;
+        if (loginUser(u, p)) location.reload();
+        else alert("Invalid login");
+      };
+    } else {
+      authDiv.innerHTML = `<button onclick="logout()">Logout</button>`;
+      window.logout = () => {
+        localStorage.removeItem('currentUser');
+        location.reload();
+      };
+      shopDiv.style.display = 'block';
+      renderShop(shopDiv, addToCart);
+      renderCart(cartDiv);
+    }
+  </script>
+</body>
+</html>
