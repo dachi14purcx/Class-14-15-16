@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Age Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-2xl shadow-md max-w-md w-full">
+    <div class="grid grid-cols-3 gap-4 text-center text-sm text-gray-500 font-medium">
+      <div>
+        <label for="day">DAY</label>
+        <input id="day" type="number" placeholder="DD" class="mt-1 w-full px-2 py-2 border rounded-md text-center font-bold text-lg" />
+      </div>
+      <div>
+        <label for="month">MONTH</label>
+        <input id="month" type="number" placeholder="MM" class="mt-1 w-full px-2 py-2 border rounded-md text-center font-bold text-lg" />
+      </div>
+      <div>
+        <label for="year">YEAR</label>
+        <input id="year" type="number" placeholder="YYYY" class="mt-1 w-full px-2 py-2 border rounded-md text-center font-bold text-lg" />
+      </div>
+    </div>
+
+    <button onclick="calculateAge()" class="mt-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-md w-full">
+      Calculate Age
+    </button>
+
+    <div class="mt-6 border-t pt-6 text-4xl font-bold text-black space-y-2">
+      <div><span id="years" class="text-purple-600">--</span> years</div>
+      <div><span id="months" class="text-purple-600">--</span> months</div>
+      <div><span id="days" class="text-purple-600">--</span> days</div>
+    </div>
+  </div>
+
+  <script>
+    function calculateAge() {
+      const day = parseInt(document.getElementById('day').value);
+      const month = parseInt(document.getElementById('month').value) - 1; // JS months are 0-indexed
+      const year = parseInt(document.getElementById('year').value);
+      const birthDate = new Date(year, month, day);
+      const today = new Date();
+
+      if (isNaN(birthDate.getTime()) || birthDate > today) {
+        alert("Please enter a valid date.");
+        return;
+      }
+
+      let ageYears = today.getFullYear() - birthDate.getFullYear();
+      let ageMonths = today.getMonth() - birthDate.getMonth();
+      let ageDays = today.getDate() - birthDate.getDate();
+
+      if (ageDays < 0) {
+        ageMonths--;
+        const lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        ageDays += lastMonth.getDate();
+      }
+
+      if (ageMonths < 0) {
+        ageYears--;
+        ageMonths += 12;
+      }
+
+      document.getElementById('years').textContent = ageYears;
+      document.getElementById('months').textContent = ageMonths;
+      document.getElementById('days').textContent = ageDays;
+    }
+  </script>
+</body>
+</html>
