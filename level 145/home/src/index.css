@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+
+body {
+    background-color: #222423;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    overflow-x: clip;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+.nav {
+    background-color: #3b3b3b;
+}
+
+.footer {
+    background-color: #3b3b3b;
+}
+
+.header-img {
+    animation: header-img-animation linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vw 30vw;
+}
+
+@keyframes header-img-animation {
+    to { scale: 1.5; opacity: 0;}
+}
+
+.header-hr {
+    transform-origin: right;
+    animation: scroll ease-in;
+    animation-timeline: view();
+}
+
+@keyframes scroll {
+    to {scale: 0 1}
+}
+
+.skills {
+    animation: skills linear;
+    animation-timeline: scroll(root);
+}
+
+@keyframes skills {
+    to {translate: calc(50% + 80vw)}
+}
+
+.introduction-img {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: 0vw 35vw;
+}
+
+@keyframes appear {
+    from {opacity: 0; scale: 0.5;}
+    to {opacity: 1; scale: 1;}
+}
+
+.introduction-hr {
+    transform-origin: left;
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 30vw;
+}
+
+
+.about-hr {
+    transform-origin: left;
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 10vw;
+}
+
+.project-img {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: 0vw 40vw;
+}
+
+.projects-btn {
+    transform-origin: left;
+    animation: btn linear forwards;
+    animation-timeline: view();
+    animation-range: -20vw 3vw;
+}
+
+@keyframes btn {
+    to {transform: translate(0, -8vw);}
+}
+
+.projects-hr {
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 27vw;
+}
+
+.project-hr {
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 15vw;
+}
+
+.left-hr {
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 22vw;
+}
+
+.right-hr {
+    transform-origin: right;
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 22vw;
+}
+
+.hr {
+    transform-origin: left;
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 22vw;
+}
+
+.contact-hr {
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 30vw;
+}
+
+.thanks-hr {
+    animation: line linear forwards;
+    animation-timeline: view();
+    animation-range: 0vw 10vw;
+}
+
+@keyframes line {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}

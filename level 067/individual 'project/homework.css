@@ -1,10 +1,10 @@
 body {
-background-color: #222423;
-margin: 0px;
-font-family: sans-serif;
-color: white;
-display: flex;
-overflow-x: clip;
+    background-color: #222423;
+    margin: 0px;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    overflow-x: clip;
 }
 
 ::-webkit-scrollbar {
