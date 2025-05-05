@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React from Scratch</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React & ReactDOM (React 18) -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  
+  <!-- Babel for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Your Script -->
+  <script type="text/babel">
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+
+    // 1) JSX ელემენტი
+    const jsxDiv = <div>Hello from JSX!</div>;
+
+    // 2) React.createElement() ელემენტი
+    const createElementDiv = React.createElement('div', null, 'Hello from createElement!');
+
+    // 3) სტრუქტურა JSX-ით
+    const jsxStructure = (
+      <div>
+        <h1>My Website</h1>
+        <p>Welcome to my site!</p>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    );
+
+    // 4) იგივე სტრუქტურა createElement-ით
+    const createElementStructure = React.createElement(
+      'div',
+      null,
+      React.createElement('h1', null, 'My Website'),
+      React.createElement('p', null, 'Welcome to my site!'),
+      React.createElement(
+        'ul',
+        null,
+        React.createElement('li', null, 'Home'),
+        React.createElement('li', null, 'About'),
+        React.createElement('li', null, 'Contact')
+      )
+    );
+
+    // 5) ვირტუალური DOM-ის ლოგი
+    console.log("ვირტუალური DOM:", jsxStructure);
+
+    // 6) გაერთიანებული რენდერი
+    root.render(
+      <div>
+        <h2>1. JSX:</h2>
+        {jsxDiv}
+
+        <h2>2. React.createElement():</h2>
+        {createElementDiv}
+
+        <h2>3a. JSX Structure:</h2>
+        {jsxStructure}
+
+        <h2>3b. createElement Structure:</h2>
+        {createElementStructure}
+      </div>
+    );
+  </script>
+</body>
+</html>

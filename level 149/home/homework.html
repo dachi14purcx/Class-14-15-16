@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React useState Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div id="root"></div>
+
+  <!-- React & Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    // 1. Toggle Buttons: ON / OFF
+    function ToggleFeature() {
+      const [status, setStatus] = useState(false);
+      return (
+        <div className="mb-6">
+          <h2 className="text-xl font-bold mb-2">1. ფუნქციის ჩართვა/გამორთვა</h2>
+          <button
+            onClick={() => setStatus(!status)}
+            className={`px-4 py-2 rounded ${status ? 'bg-green-500' : 'bg-gray-400'} text-white`}>
+            {status ? "ON" : "OFF"}
+          </button>
+        </div>
+      );
+    }
+
+    // 2. Theme switcher
+    function ThemeSwitcher() {
+      const [dark, setDark] = useState(false);
+      const theme = dark ? "bg-gray-800 text-white" : "bg-white text-black";
+
+      return (
+        <div className={`p-4 mb-6 rounded ${theme}`}>
+          <h2 className="text-xl font-bold mb-2">2. თემა: {dark ? "Dark" : "Light"}</h2>
+          <button
+            onClick={() => setDark(!dark)}
+            className="bg-blue-500 text-white px-4 py-2 rounded">
+            თემა შეცვალე
+          </button>
+        </div>
+      );
+    }
+
+    // 3. Score game
+    function ScoreGame() {
+      const [score, setScore] = useState(0);
+      return (
+        <div className="mb-6">
+          <h2 className="text-xl font-bold mb-2">3. ქულების თამაში</h2>
+          <p className="text-lg">ქულა: {score}</p>
+          <div className="space-x-2 mt-2">
+            <button onClick={() => setScore(score + 1)} className="bg-green-500 text-white px-3 py-1 rounded">+1</button>
+            <button onClick={() => setScore(0)} className="bg-red-500 text-white px-3 py-1 rounded">Reset</button>
+          </div>
+        </div>
+      );
+    }
+
+    // 4. Profile Card Switcher
+    function ProfileCard({ user }) {
+      return (
+        <div className="bg-white p-4 shadow-md rounded text-center w-64 mx-auto">
+          <img src={user.image} className="w-24 h-24 mx-auto rounded-full mb-2" />
+          <h3 className="font-semibold text-lg">{user.name} {user.surname}</h3>
+          <p className="text-sm text-gray-600">{user.bio}</p>
+        </div>
+      );
+    }
+
+    function ProfileSwitcher() {
+      const people = [
+        {
+          name: "Anna",
+          surname: "Smith",
+          image: "https://randomuser.me/api/portraits/women/68.jpg",
+          bio: "Frontend Developer"
+        },
+        {
+          name: "John",
+          surname: "Doe",
+          image: "https://randomuser.me/api/portraits/men/45.jpg",
+          bio: "Backend Developer"
+        },
+        {
+          name: "Lara",
+          surname: "Croft",
+          image: "https://randomuser.me/api/portraits/women/44.jpg",
+          bio: "UX Designer"
+        }
+      ];
+
+      const [index, setIndex] = useState(0);
+
+      return (
+        <div className="mb-6 text-center">
+          <h2 className="text-xl font-bold mb-2">4. პროფილის გადართვა</h2>
+          <ProfileCard user={people[index]} />
+          <button
+            onClick={() => setIndex((index + 1) % people.length)}
+            className="mt-3 bg-purple-600 text-white px-4 py-2 rounded">
+            შემდეგი
+          </button>
+        </div>
+      );
+    }
+
+    // 5. Superhero Comparison
+    function HeroCard({ name, power, image }) {
+      return (
+        <div className="bg-white p-4 rounded shadow w-52 text-center">
+          <img src={image} className="w-20 h-20 mx-auto rounded-full mb-2" />
+          <h3 className="font-semibold">{name}</h3>
+          <p className="text-gray-600">ძალა: {power}</p>
+        </div>
+      );
+    }
+
+    function HeroComparison() {
+      const heroes = [
+        { name: "Batman", power: 80, image: "https://www.superherodb.com/pictures2/portraits/10/100/639.jpg" },
+        { name: "Superman", power: 100, image: "https://www.superherodb.com/pictures2/portraits/10/100/791.jpg" },
+        { name: "Flash", power: 90, image: "https://www.superherodb.com/pictures2/portraits/10/100/891.jpg" }
+      ];
+
+      return (
+        <div className="mb-10">
+          <h2 className="text-xl font-bold mb-4">5. სუპერგმირების შედარება</h2>
+          <div className="flex flex-wrap gap-4 justify-center">
+            {heroes.map((h, i) => <HeroCard key={i} {...h} />)}
+          </div>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <div className="p-6 space-y-10">
+          <ToggleFeature />
+          <ThemeSwitcher />
+          <ScoreGame />
+          <ProfileSwitcher />
+          <HeroComparison />
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
