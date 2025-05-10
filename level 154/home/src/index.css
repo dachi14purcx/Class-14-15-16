@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+body {
+  background-color: #F7F9FC;
+  color: #111827;
+}
+
+.bg {
+  background-color: #FFFFFF;
+}
+
+.bgb {
+  background-color: #10B981;
+}
+
+.bgb:hover {
+  background-color: #29c591;
+}
+
+.bgs {
+  background-color: rgba(102, 249, 180, 0.5);
+}
