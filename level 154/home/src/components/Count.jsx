@@ -2,7 +2,7 @@ import React from 'react'
 
 const Count = (props) => {
   return (
-    <div className='bg p-9 inline'>Count {props.count}</div>
+    <div className='bg-white p-9 inline'>Count {props.count}</div>
   )
 }
 
