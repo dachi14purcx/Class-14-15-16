@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 8px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="auth-container">
+    <h2>შესვლა ან რეგისტრაცია</h2>
+    <input type="text" id="username" placeholder="მომხმარებელი">
+    <input type="password" id="password" placeholder="პაროლი">
+    <button onclick="login()">შესვლა / რეგისტრაცია</button>
+  </div>
+
+  <div id="greeting-container" style="display: none;">
+    <h2 id="greeting"></h2>
+  </div>
+
+  <script>
+    const storedUser = localStorage.getItem('username');
+    if (storedUser) {
+      showGreeting(storedUser);
+    }
+
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        alert("გთხოვთ შეიყვანოთ ორივე ველი");
+        return;
+      }
+
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+
+      showGreeting(username);
+    }
+
+    function showGreeting(username) {
+      document.getElementById('auth-container').style.display = 'none';
+      document.getElementById('greeting-container').style.display = 'block';
+      document.getElementById('greeting').textContent = `გამარჯობა, ${username}!`;
+    }
+  </script>
+
+</body>
+</html>

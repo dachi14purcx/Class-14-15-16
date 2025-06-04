@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+
+body {
+  background: radial-gradient(circle at center, #2C5364, #203A43, #0F2027);
+  font-family: 'Inter';
+  padding: 0;
+}
+
+.hello{
+  -webkit-text-stroke: #2D5262 0.2vw;
+}
+
+.bg {
+  background: linear-gradient(to right, #43CEA2, #185A9D);
+}
+
+.text {
+  background: linear-gradient(to right, #43CEA2, #185A9D);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading {
+  background: linear-gradient(to right, #00F260, #0575E6);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shadow-text {
+  text-shadow: -0.5vw 0.8vw 1vw rgba(0, 0, 0, 0.4);
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 0.5vw;
+  background: transparent;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 0.5vw;
+  background: linear-gradient(to right, #43CEA2, #185A9D);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.nav {
+  padding: 1vw;
+  padding-top: 2vw;
+  background: rgba( 255, 255, 255, 0 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  z-index: 1;
+}
