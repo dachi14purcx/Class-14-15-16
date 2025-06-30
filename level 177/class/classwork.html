@@ -1,0 +1,36 @@
+<div class='a'></div>
+<div class='b'></div>
+<div class='a c'></div>
+
+<style>
+  body {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .a {
+    width: 250px;
+    height: 50px;
+    border: 45.5px solid #9CBBC2;
+    box-sizing: content-box;
+  }
+
+  .b {
+    width: 80px;
+    height: 110%;
+    background: rgba(116, 159, 170, 0.7);
+    position: absolute;
+    border-right: 80px solid #5A8D9A;
+  }
+
+  .c {
+    position: absolute;
+    background: white;
+    border: none;
+    z-index: 1;
+  }
+</style>
