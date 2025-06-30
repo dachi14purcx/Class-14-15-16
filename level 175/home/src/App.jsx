@@ -15,7 +15,6 @@ function App() {
       ageRef.current?.focus()
     }
   }, [name, age])
-
   return (
     <div className='flex'>
       <div>
