@@ -17,7 +17,7 @@ const reducer = (state, action) => {
       };
 
     case 'redo':
-      if (future.length < 1){return state}
+      if (future.length < 1) return state
       return {
         present: [...present, future[0]],
         future: future.slice(1),
