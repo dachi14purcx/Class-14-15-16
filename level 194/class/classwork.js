@@ -46,3 +46,4 @@ function getPassword(grid, directions) {
         break;
     }
   }
+}
