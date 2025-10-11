@@ -1,0 +1,12 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "first backend homework",
+  "license": "ISC",
+  "author": "dachi",
+  "type": "module",
+  "main": "homework.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
